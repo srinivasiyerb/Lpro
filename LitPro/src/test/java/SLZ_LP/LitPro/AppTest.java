@@ -46,7 +46,7 @@ public class AppTest {
 	
 	@BeforeSuite
 	public static void startTesting(){
-		ReportUtil.startTesting("//Keyword_Driven//index.html", 
+		ReportUtil.startTesting("user.dir"+"/Keyword_Driven/index.html", 
 //				ReportUtil.startTesting("C://Tekwah_Results//index.html", 		
                 TestUtil.now("dd.MMMMM.yyyy hh.mm.ss aaa"), 
                 "Dev",
