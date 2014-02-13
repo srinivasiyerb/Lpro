@@ -34,7 +34,7 @@ public class ReportUtil {
 	  {
 		indexResultFilename = filename;
 		//currentDir = indexResultFilename.substring(0,indexResultFilename.lastIndexOf("//"));
-		currentDir = indexResultFilename
+		currentDir = indexResultFilename;
 		FileWriter fstream =null;
 		 BufferedWriter out =null;
 	      try{
