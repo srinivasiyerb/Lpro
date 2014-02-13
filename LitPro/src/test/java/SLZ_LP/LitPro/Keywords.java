@@ -396,8 +396,8 @@ public class Keywords extends AppTest{
 	public static String rostersUpload(){
 //		clickDropDown(0);
 		APPICATION_LOGS.debug("Executing rostersUpload Keyword");
-		String StudentRoster= System.getProperty("user.dir")+"\\config\\Student_Details.csv";
-		String TeacherRoster= System.getProperty("user.dir")+"\\config\\Teacher_Details.csv";
+		String StudentRoster= System.getProperty("user.dir")+"/config/Student_Details.csv";
+		String TeacherRoster= System.getProperty("user.dir")+"/config/Teacher_Details.csv";
 		
 		try{
 			
