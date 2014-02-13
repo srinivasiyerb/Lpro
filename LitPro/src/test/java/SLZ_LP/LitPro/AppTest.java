@@ -59,7 +59,7 @@ public class AppTest {
 		// load the property fIles
 		// load the config prop
 		CONFIG = new Properties();
-		FileInputStream fs = new FileInputStream(System.getProperty("user.dir")+"\\config\\config.properties");
+		FileInputStream fs = new FileInputStream(System.getProperty("user.dir")+"/config/config.properties");
 		CONFIG.load(fs);
 		
 		// LOAD OR
