@@ -46,7 +46,7 @@ public class AppTest {
 	
 	@BeforeSuite
 	public static void startTesting(){
-		ReportUtil.startTesting(System.getProperty("user.dir")+"//Keyword_Driven//index.html", 
+		ReportUtil.startTesting(System.getProperty("user.dir")+"//LitPro//Keyword_Driven//index.html", 
 //				ReportUtil.startTesting("C://Tekwah_Results//index.html", 		
                 TestUtil.now("dd.MMMMM.yyyy hh.mm.ss aaa"), 
                 "Dev",
@@ -59,7 +59,7 @@ public class AppTest {
 		// load the property fIles
 		// load the config prop
 		CONFIG = new Properties();
-		FileInputStream fs = new FileInputStream(System.getProperty("user.dir")+"/config/config.properties");
+		FileInputStream fs = new FileInputStream(System.getProperty("user.dir")+"/LitPro/config/config.properties");
 		CONFIG.load(fs);
 		
 		// LOAD OR
