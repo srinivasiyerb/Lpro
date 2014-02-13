@@ -9,7 +9,8 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
+//import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 // testng
@@ -25,8 +26,8 @@ public class Keywords extends AppTest{
 	public static String navigate(){
 		APPICATION_LOGS.debug("Executing Navigate");
 		if(wbdv == null){
-			if(CONFIG.getProperty("testBrowser").equals("Firefox")){
-				wbdv = new FirefoxDriver();
+			if(CONFIG.getProperty("testBrowser").equals("htmlunit")){
+				wbdv = new HtmlUnitDriver();
 //				wbdv = new ChromeDriver();
 				driver = new EventFiringWebDriver(wbdv);
 				driver.manage().window().maximize();
