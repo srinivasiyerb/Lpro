@@ -64,15 +64,15 @@ public class AppTest {
 		
 		// LOAD OR
 		OR = new Properties();
-		fs = new FileInputStream(System.getProperty("user.dir")+"\\config\\OR.properties");
+		fs = new FileInputStream(System.getProperty("user.dir")+"/config/OR.properties");
 		OR.load(fs);
 		// app text prop load
 		APPTEXT = new Properties();
-		fs = new FileInputStream(System.getProperty("user.dir")+"\\config\\app_text.properties");
+		fs = new FileInputStream(System.getProperty("user.dir")+"/config/app_text.properties");
 		APPTEXT.load(fs);
 		// intialize datatable
-		controller= new Xls_Reader(System.getProperty("user.dir")+"\\config\\Controller.xlsx");
-		testData  =  new Xls_Reader(System.getProperty("user.dir")+"\\config\\TestData.xlsx");
+		controller= new Xls_Reader(System.getProperty("user.dir")+"/config/Controller.xlsx");
+		testData  =  new Xls_Reader(System.getProperty("user.dir")+"/config/TestData.xlsx");
 		
 
 	}
