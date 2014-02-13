@@ -15,9 +15,9 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
-import SLZ_LP.LitPro.DriverScript;
+import SLZ_LP.LitPro.AppTest;
 
-public class TestUtil extends DriverScript{
+public class TestUtil extends AppTest{
 
 	
 	// returns current date and time
@@ -67,7 +67,7 @@ public class TestUtil extends DriverScript{
 	 	
 }
   catch(Exception e)
-  {
+  {  
 	  e.printStackTrace();
   } 
  }	
@@ -75,15 +75,14 @@ public class TestUtil extends DriverScript{
 //	This is the function to test the keyword method with params
 	
 	
-//	public static void main(String args[]) {
-//		
-//		String methodWithParam = "getValues(1,2,3,4,5)";
-//		
-//		System.out.println("Method params : " + methodWithParam.substring(methodWithParam.indexOf("(") + 1, methodWithParam.indexOf(")")));
-//		System.out.println("Method Name : " + methodWithParam.substring(0, methodWithParam.indexOf("(")));
-//		
-//	}
+/*	public static void main(String args[]) {
+		
+	String methodWithParam = "getValues(1,2,3,4,5)";
 	
+		System.out.println("Method params : " + methodWithParam.substring(methodWithParam.indexOf("(") + 1, methodWithParam.indexOf(")")));		System.out.println("Method Name : " + methodWithParam.substring(0, methodWithParam.indexOf("(")));
+		
+	}
+	*/
 //	This ends the function to test the param keyword method
 	
 }

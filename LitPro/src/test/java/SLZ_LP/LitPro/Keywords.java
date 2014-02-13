@@ -17,11 +17,11 @@ import org.testng.Assert;
 
 import util.TestUtil;
 
-public class Keywords extends DriverScript{
+public class Keywords extends AppTest{
 	public static String MainwindowID;
 	public static String Dropdowndata;
 	
-	// navigate
+	// navigate  
 	public static String navigate(){
 		APPICATION_LOGS.debug("Executing Navigate");
 		if(wbdv == null){
