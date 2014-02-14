@@ -5,8 +5,9 @@ import java.lang.reflect.Method;
 import java.util.Properties;
 
 import org.apache.log4j.Logger;
-import org.openqa.selenium.WebDriver;
+//import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
@@ -29,7 +30,7 @@ public class AppTest {
 
 	public static String currentTest;
 	public static String keyword;
-	public static WebDriver wbdv=null;
+	public static HtmlUnitDriver wbdv=null;
 	public static EventFiringWebDriver driver=null;
 	public static String object;
 	public static String currentTSID;
