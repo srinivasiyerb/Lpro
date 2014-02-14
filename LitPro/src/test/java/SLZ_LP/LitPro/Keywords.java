@@ -30,7 +30,6 @@ public class Keywords extends AppTest{
 				wbdv = new FirefoxDriver();
 //				wbdv = new ChromeDriver();
 				driver = new EventFiringWebDriver(wbdv);
-			//	driver = new HtmlUnitDriver();
 				driver.manage().window().maximize();
 				driver.navigate().to(CONFIG.getProperty(object));
 				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
