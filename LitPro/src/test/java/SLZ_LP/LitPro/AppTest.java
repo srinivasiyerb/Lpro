@@ -30,7 +30,7 @@ public class AppTest {
 
 	public static String currentTest;
 	public static String keyword;
-	public static WebDriver wbdv=null;
+	public static HtmlUnitDriver wbdv=null;
 	public static EventFiringWebDriver driver=null;
 	public static String object;
 	public static String currentTSID;
