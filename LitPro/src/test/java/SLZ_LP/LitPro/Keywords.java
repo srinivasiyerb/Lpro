@@ -26,7 +26,7 @@ public class Keywords extends AppTest{
 	public static String navigate(){
 		APPICATION_LOGS.debug("Executing Navigate");
 		if(wbdv == null){
-			if(CONFIG.getProperty("testBrowser").equals("Firefox")){
+			//if(CONFIG.getProperty("testBrowser").equals("Firefox")){
 				wbdv = new HtmlUnitDriver();
 //				wbdv = new ChromeDriver();
 				driver = new EventFiringWebDriver(wbdv);
@@ -34,7 +34,7 @@ public class Keywords extends AppTest{
 				driver.navigate().to(CONFIG.getProperty(object));
 				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 				
-			}
+		//	}
 			
 			
 		driver.navigate().to(CONFIG.getProperty(object));
