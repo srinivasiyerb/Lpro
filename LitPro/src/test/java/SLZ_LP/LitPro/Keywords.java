@@ -27,7 +27,7 @@ public class Keywords extends AppTest{
 		APPICATION_LOGS.debug("Executing Navigate");
 		if(wbdv == null){
 			if(CONFIG.getProperty("testBrowser").equals("Firefox")){
-				wbdv = new HtmlUnitDriver();
+				wbdv = new FirefoxDriver();
 //				wbdv = new ChromeDriver();
 				driver = new EventFiringWebDriver(wbdv);
 			//	driver = new HtmlUnitDriver();
