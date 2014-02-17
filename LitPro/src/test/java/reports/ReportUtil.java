@@ -33,7 +33,7 @@ public class ReportUtil {
 	public static void startTesting(String filename,String testStartTime,String env,String rel)
 	  {
 		indexResultFilename = filename;
-		currentDir = indexResultFilename.substring(0,indexResultFilename.lastIndexOf("//"));
+		currentDir = indexResultFilename.substring(0,indexResultFilename.lastIndexOf("/"));
 	
 		FileWriter fstream =null;
 		 BufferedWriter out =null;
