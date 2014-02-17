@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.Alert;
+import org.openqa.selenium.Alert; 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -26,22 +26,22 @@ public class Keywords extends AppTest{
 	// navigate  
 	public static String navigate(){
 		APPICATION_LOGS.debug("Executing Navigate");
-		if(wbdv == null){
-			if(CONFIG.getProperty("testBrowser").equals("Firefox")){
-			//	wbdv = new HtmlUnitDriver();
+		if(hudv == null){
+			//if(CONFIG.getProperty("testBrowser").equals("Firefox")){
+				hudv = new HtmlUnitDriver();
 				//wbdv = new ChromeDriver();
-				System.out.println("test1");
-				wbdv = new FirefoxDriver();
-				driver = new EventFiringWebDriver(wbdv);
+				//System.out.println("test1");
+			//	wbdv = new FirefoxDriver();
+				driver = new EventFiringWebDriver(hudv);
 				driver.manage().window().maximize();
 				driver.navigate().to(CONFIG.getProperty(object));
 				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 				
-			}
+			//}
 			
 			
 		driver.navigate().to(CONFIG.getProperty(object));
-		System.out.println("Test2");
+		//System.out.println("Test2");
 		}	
 			return "Pass";
 		
@@ -96,7 +96,7 @@ public class Keywords extends AppTest{
 		driver.close();
 		Thread.sleep(3000);
 		Alert al = driver.switchTo().alert();
-		System.out.println("alert1");
+		//System.out.println("alert1");
 		al.accept();
 		}catch(Throwable t){
 			// report error
@@ -115,7 +115,7 @@ public class Keywords extends AppTest{
 			
 			al.accept();
 
-System.out.println("alert2");
+//System.out.println("alert2");
 		}catch(Throwable t){
 			// report error
 			APPICATION_LOGS.debug("Error while closing the Alert -"+ object + t.getMessage());
@@ -225,7 +225,7 @@ System.out.println("alert2");
 			windowids = driver.getWindowHandles();
 			 iter= windowids.iterator();
 			 String mainWindowId=iter.next();
-			 System.out.println(iter.next());
+			 //System.out.println(iter.next());
 			 String tabbedWindowId=iter.next();
 			 driver.switchTo().window(tabbedWindowId);
 			 
@@ -278,10 +278,10 @@ System.out.println("alert2");
 			
 			Thread.sleep(3000);
 			System.out.println("From Alert: Before Switching = "+MainwindowID);
-			System.out.println(MainwindowID);
+			//System.out.println(MainwindowID);
 			driver.switchTo().window(MainwindowID);
 			System.out.println("From Alert: After Switching = "+MainwindowID);
-			System.out.println(MainwindowID);
+			//System.out.println(MainwindowID);
 			
 			}catch(Throwable t){
 				// report error
