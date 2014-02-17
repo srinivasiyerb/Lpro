@@ -31,6 +31,7 @@ public class AppTest {
 	public static String currentTest;
 	public static String keyword;
 	public static WebDriver wbdv=null;
+	public static HtmlUnitDriver hudv=null;
 	public static EventFiringWebDriver driver=null;
 	public static String object;
 	public static String currentTSID;
@@ -47,7 +48,7 @@ public class AppTest {
 	
 	@BeforeSuite
 	public static void startTesting(){
-		ReportUtil.startTesting(System.getProperty("user.dir")+"//Keyword_Driven//index.html", 
+		ReportUtil.startTesting(System.getProperty("user.dir")+"/Keyword_Driven/index.html", 
 //				ReportUtil.startTesting("C://Tekwah_Results//index.html", 		
                 TestUtil.now("dd.MMMMM.yyyy hh.mm.ss aaa"), 
                 "Dev",
