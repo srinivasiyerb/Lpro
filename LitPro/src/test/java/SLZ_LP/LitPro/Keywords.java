@@ -225,7 +225,7 @@ System.out.println("alert2");
 			windowids = driver.getWindowHandles();
 			 iter= windowids.iterator();
 			 String mainWindowId=iter.next();
-			 System.out.println(iter.next);
+			 System.out.println(iter.next());
 			 String tabbedWindowId=iter.next();
 			 driver.switchTo().window(tabbedWindowId);
 			 
