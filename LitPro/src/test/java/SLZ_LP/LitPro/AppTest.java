@@ -99,7 +99,7 @@ public class AppTest {
 
 				APPICATION_LOGS.debug("Executing the test "+ currentTest);
 				// implement keyword . Reflection API
-				//System.out.println(controller.getRowCount(currentTest));
+				System.out.println(controller.getRowCount(currentTest));
 				for(int tsid=2;tsid<=controller.getRowCount(currentTest);tsid++){
 					// values from xls
 					keyword=controller.getCellData(currentTest, "Keyword", tsid);
