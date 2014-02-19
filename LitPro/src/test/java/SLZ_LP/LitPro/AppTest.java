@@ -81,27 +81,33 @@ public class AppTest {
 	}
 	
 	@Test
-	public void testApp() {
+	public void testApp()
+	{
 		String startTime=null;
 	//	ReportUtil.startSuite("Suite 1");
-		for(int tcid=2 ; tcid<=controller.getRowCount("Suite1");tcid++){
+		for(int tcid=2 ; tcid<=controller.getRowCount("Suite1");tcid++)
+		{
 			currentTest = controller.getCellData("Suite1", "TCID", tcid);
 			// initilize start time of test
-			if(controller.getCellData("Suite1", "Runmode", tcid).equalsIgnoreCase("Y")){
+			if(controller.getCellData("Suite1", "Runmode", tcid).equalsIgnoreCase("Y"))
+			{
 				// execute the keywords
 				// loop again - rows in test data
 				int totalSets=testData.getRowCount(currentTest+"1");; // holds total rows in test data sheet. IF sheet does not exist then 2 by default
-				if(totalSets<=1){
+				if(totalSets<=1)
+				{
 					totalSets=2; // run atleast once
 				}
 					
-				for( testRepeat=2; testRepeat<=totalSets;testRepeat++){	
+				for( testRepeat=2; testRepeat<=totalSets;testRepeat++)
+				{	
 					startTime=TestUtil.now("dd.MMMMM.yyyy hh.mm.ss aaa");
 
 				APPICATION_LOGS.debug("Executing the test "+ currentTest);
 				// implement keyword . Reflection API
 				System.out.println(controller.getRowCount(currentTest));
-				for(int tsid=2;tsid<=controller.getRowCount(currentTest);tsid++){
+				for(int tsid=2;tsid<=controller.getRowCount(currentTest);tsid++)
+				{
 					// values from xls
 					keyword=controller.getCellData(currentTest, "Keyword", tsid);
 					object=controller.getCellData(currentTest, "Object", tsid);
@@ -110,11 +116,13 @@ public class AppTest {
 					proceedOnFail=controller.getCellData(currentTest, "ProceedOnFail", tsid);
 					data_column_name=controller.getCellData(currentTest, "Data_Column_Name", tsid);
 					//APPICATION_LOGS.debug(keyword);
-					try{
+					try
+					{
 					
 					Object keywordsObjectParam[] = getParameters(keyword);
 					String result = null;
-					if (keywordsObjectParam != null) {
+					if (keywordsObjectParam != null) 
+					{
 
 						Method method= Keywords.class.getDeclaredMethod(keyword.substring(0, keyword.indexOf("(")), new Class[]{Object[].class});
 						result = (String)method.invoke(null, new Object[] {keywordsObjectParam});
@@ -127,10 +135,11 @@ public class AppTest {
 					APPICATION_LOGS.debug("***Result of execution -- "+result);
 					// take screenshot - every keyword
 					String fileName="Suite1_TC"+(tcid-1)+"_TS"+tsid+"_"+keyword+testRepeat+".jpg";
-					TestUtil.takeScreenShot(CONFIG.getProperty("screenshotPath")+fileName);
+				//	TestUtil.takeScreenShot(CONFIG.getProperty("screenshotPath")+fileName);
 				//	ReportUtil.addKeyword(stepDescription, keyword, result, fileName);
 
-						if(result.startsWith("Fail")){
+						if(result.startsWith("Fail"))
+						{
 							testStatus=result;
 							// take screenshot - only on error
 							//String fileName="Suite1_TC"+tcid+"_TS"+tsid+"_"+keyword+testRepeat+".jpg";
@@ -157,11 +166,11 @@ public class AppTest {
 		/*		ReportUtil.addTestCase(currentTest, 
 										startTime, 
 										TestUtil.now("dd.MMMMM.yyyy hh.mm.ss aaa"),
-										testStatus );
-		}		}// test data
+										testStatus );*/
+				}// test data
 
-		*/					
-			else{
+							
+			}else{
 				APPICATION_LOGS.debug("Skipping the test "+ currentTest);
 				testStatus="Skip";
 				// report skipped
