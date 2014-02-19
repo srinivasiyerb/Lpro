@@ -158,10 +158,10 @@ public class AppTest {
 										startTime, 
 										TestUtil.now("dd.MMMMM.yyyy hh.mm.ss aaa"),
 										testStatus );
-				}// test data
+		}		}// test data
 
 		*/					
-			}else{
+			else{
 				APPICATION_LOGS.debug("Skipping the test "+ currentTest);
 				testStatus="Skip";
 				// report skipped
@@ -179,14 +179,14 @@ public class AppTest {
 		//ReportUtil.endSuite();
 	}
 	
-	@AfterSuite
+/*	@AfterSuite
 	public static void endScript(){
 		
 		//ReportUtil.updateEndTime(TestUtil.now("dd.MMMMM.yyyy hh.mm.ss aaa"));
 			
 		
 	}
-	
+*/	
 	private Object[] getParameters(String keyword) {
 		
 		Object objectParam[] = null;
