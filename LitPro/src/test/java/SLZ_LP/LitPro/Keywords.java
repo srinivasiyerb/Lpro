@@ -27,11 +27,11 @@ public class Keywords extends AppTest{
 	public static String navigate(){
 		APPICATION_LOGS.debug("Executing Navigate");
 		if(wbdv == null){
-			if(CONFIG.getProperty("testBrowser").equals("Firefox")){
+		//	if(CONFIG.getProperty("testBrowser").equals("Firefox")){
 			//	hudv = new HtmlUnitDriver();
 				//wbdv = new ChromeDriver();
 				//System.out.println("test1");
-				wbdv = new FirefoxDriver();
+				wbdv = new HtmlUnitDriver();
 				driver = new EventFiringWebDriver(wbdv);
 				driver.manage().window().maximize();
 				driver.navigate().to(CONFIG.getProperty(object));
