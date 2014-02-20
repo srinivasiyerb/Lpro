@@ -135,7 +135,8 @@ public class AppTest {
 					APPICATION_LOGS.debug("***Result of execution -- "+result);
 					// take screenshot - every keyword
 					String fileName="Suite1_TC"+(tcid-1)+"_TS"+tsid+"_"+keyword+testRepeat+".jpg";
-				//	TestUtil.takeScreenShot(CONFIG.getProperty("screenshotPath")+fileName);
+				
+					TestUtil.takeScreenShot(CONFIG.getProperty("screenshotPath")+fileName);
 				//	ReportUtil.addKeyword(stepDescription, keyword, result, fileName);
 
 						if(result.startsWith("Fail"))
