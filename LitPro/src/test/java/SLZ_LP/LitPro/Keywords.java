@@ -37,7 +37,7 @@ public class Keywords extends AppTest{
 				driver.navigate().to(CONFIG.getProperty(object));
 				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 				
-			}
+		//	}
 			
 			
 		driver.navigate().to(CONFIG.getProperty(object));
