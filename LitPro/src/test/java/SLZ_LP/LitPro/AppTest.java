@@ -45,7 +45,6 @@ public class AppTest {
 	public static int  testRepeat;
 	public static Logger APPICATION_LOGS = Logger.getLogger("devpinoyLogger");
 
-/*	
 	@BeforeSuite
 	public static void startTesting(){
 		ReportUtil.startTesting(System.getProperty("user.dir")+"/Keyword_Driven/index.html", 
@@ -56,7 +55,7 @@ public class AppTest {
 		
 	}
 	
-*/
+
 	@BeforeClass
 	public void initialize() throws IOException{
 		// load the property fIles
@@ -84,7 +83,7 @@ public class AppTest {
 	public void testApp()
 	{
 		String startTime=null;
-	//	ReportUtil.startSuite("Suite 1");
+		ReportUtil.startSuite("Suite 1");
 		for(int tcid=2 ; tcid<=controller.getRowCount("Suite1");tcid++)
 		{
 			currentTest = controller.getCellData("Suite1", "TCID", tcid);
@@ -137,7 +136,7 @@ public class AppTest {
 					String fileName="Suite1_TC"+(tcid-1)+"_TS"+tsid+"_"+keyword+testRepeat+".jpg";
 				
 					TestUtil.takeScreenShot(CONFIG.getProperty("screenshotPath")+fileName);
-				//	ReportUtil.addKeyword(stepDescription, keyword, result, fileName);
+					ReportUtil.addKeyword(stepDescription, keyword, result, fileName);
 
 						if(result.startsWith("Fail"))
 						{
@@ -164,10 +163,10 @@ public class AppTest {
 					testStatus="Pass";
 				}
 				APPICATION_LOGS.debug("***********************************"+currentTest+" --- " +testStatus);
-		/*		ReportUtil.addTestCase(currentTest, 
+				ReportUtil.addTestCase(currentTest, 
 										startTime, 
 										TestUtil.now("dd.MMMMM.yyyy hh.mm.ss aaa"),
-										testStatus );*/
+										testStatus );
 				}// test data
 
 							
@@ -176,27 +175,27 @@ public class AppTest {
 				testStatus="Skip";
 				// report skipped
 				APPICATION_LOGS.debug("***********************************"+currentTest+" --- " +testStatus);
-		/*		ReportUtil.addTestCase(currentTest, 
+				ReportUtil.addTestCase(currentTest, 
 										TestUtil.now("dd.MMMMM.yyyy hh.mm.ss aaa"), 
 										TestUtil.now("dd.MMMMM.yyyy hh.mm.ss aaa"),
 										testStatus );
-		*/		
+				
 			}
 			
 			testStatus=null;
 			
 		}
-		//ReportUtil.endSuite();
+		ReportUtil.endSuite();
 	}
 	
-/*	@AfterSuite
+	@AfterSuite
 	public static void endScript(){
 		
 		//ReportUtil.updateEndTime(TestUtil.now("dd.MMMMM.yyyy hh.mm.ss aaa"));
 			
 		
 	}
-*/	
+	
 	private Object[] getParameters(String keyword) {
 		
 		Object objectParam[] = null;
