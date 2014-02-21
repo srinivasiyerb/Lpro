@@ -191,7 +191,7 @@ public class AppTest {
 	@AfterSuite
 	public static void endScript(){
 		
-		//ReportUtil.updateEndTime(TestUtil.now("dd.MMMMM.yyyy hh.mm.ss aaa"));
+		ReportUtil.updateEndTime(TestUtil.now("dd.MMMMM.yyyy hh.mm.ss aaa"));
 			
 		
 	}
