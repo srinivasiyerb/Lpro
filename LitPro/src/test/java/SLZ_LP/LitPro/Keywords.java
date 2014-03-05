@@ -27,17 +27,17 @@ public class Keywords extends AppTest{
 	public static String navigate(){
 		APPICATION_LOGS.debug("Executing Navigate");
 		if(wbdv == null){
-		//	if(CONFIG.getProperty("testBrowser").equals("Firefox")){
+			if(CONFIG.getProperty("testBrowser").equals("Firefox")){
 			//	hudv = new HtmlUnitDriver();
 				//wbdv = new ChromeDriver();
 				//System.out.println("test1");
-				wbdv = new HtmlUnitDriver();
+				wbdv = new FirefoxDriver();
 				driver = new EventFiringWebDriver(wbdv);
 				driver.manage().window().maximize();
 				driver.navigate().to(CONFIG.getProperty(object));
 				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 				
-		//	}
+			}
 			
 			
 		driver.navigate().to(CONFIG.getProperty(object));
