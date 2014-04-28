@@ -32,7 +32,7 @@ public class Keywords extends AppTest{
 				//wbdv = new ChromeDriver();
 				//System.out.println("test1");
 				wbdv = new FirefoxDriver();
-				driver = new EventFiringWebDriver(hudv);
+				driver = new EventFiringWebDriver(wbdv);
 				driver.manage().window().maximize();
 				driver.navigate().to(CONFIG.getProperty(object));
 				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
